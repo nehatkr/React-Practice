@@ -1,17 +1,22 @@
 import React from "react";
+import userData from "./data/UserData";
 
-const card = ({ Content, userName, age }) => {
+const card = ({ name, age, interest, isActive, email }) => {
   return (
     <>
-    <div className="h-screen flex items-center justify-center">
-      <div className="flex justify-center py-16 w-[300px] mx-auto rounded-lg bg-green-900">
-        <div className="text-center mb-4">
-          <h2 className="text-white ">User Name: {userName}</h2>
-          <p className="text-white ">Age: {age}</p>
-          <p className="text-white ">Content: {Content}</p>
-        </div>
+      <div className="p-4 border rounded-lg shadow-md w-60">
+        <h1 className="text-xl font-bold">Name: {name}</h1>
+        <p>Age: {age}</p>
+        <p>Email: {email}</p>
+        <h4>Interest: </h4>
+        <ul className="list-disc ml-4">
+          {interest.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+        <p>IsActive: </p>
+       
       </div>
-    </div>
     </>
   );
 };
