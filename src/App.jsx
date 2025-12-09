@@ -6,7 +6,7 @@ import userData from "./data/UserData";
 function App() {
   return (
     <>
-    <div className="flex gap-4 p-4 wrap">
+    <div className="grid grid-cols-6 gap-4 p-6 max-[1200px]:grid-cols-5 max-[900px]:grid-cols-4 max-[600px]:grid-cols-3 max-[300px]:grid-cols-2 ">
       {userData.map((user)=>(
         <Card 
        key={user.id}
