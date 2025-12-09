@@ -4,7 +4,7 @@ import userData from "./data/UserData";
 const card = ({ name, age, interest, isActive, email }) => {
   return (
     <>
-      <div className="p-4 border rounded-lg shadow-md w-60">
+      <div className="p-4 border rounded-lg shadow-md w-auto">
         <h1 className="text-xl font-bold">Name: {name}</h1>
         <p>Age: {age}</p>
         <p>Email: {email}</p>
